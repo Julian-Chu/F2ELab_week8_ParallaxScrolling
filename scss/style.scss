@@ -11,13 +11,22 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  background-color: $blue;
+}
+
+.center {
+  margin: auto;
+  width: 540px;
+  height: 540px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
 }
 
 .svg {
-  display: flex;
-  height: 768px;
-  width: 1024px;
-  background-color: $blue;
+  display: block;
+  height: 100%;
+  width: 100%;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -26,7 +35,6 @@ body {
 .svg-rect {
   // @extend %align-center;
   margin: auto;
-  fill: black;
   width: 150px;
   height: 150px;
   fill: black;
