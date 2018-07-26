@@ -3,77 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <meta
-        http-equiv="X-UA-Compatible"
-        content="ie=edge"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link
-        rel="stylesheet"
-        href="./style/style.css"
-    >
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
-    <div class="center">
-        <svg
-            width="436.55267333984375"
-            height="356.5526351928711"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:svg="http://www.w3.org/2000/svg"
-            class="svg"
-        >
+    <div class="begin">
+        <svg width="436.55267333984375" height="356.5526351928711" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="svg">
             <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
-            <g
-                class="layer"
-                transform="translate(412, 284)"
-            >
-                <title>Layer 1</title>
-                <rect
-                    class="rect"
-                    fill="#191919"
-                    height="200"
-                    id="svg_1"
-                    width="200"
-                    transform-origin="100 100"
-                />
-                <circle
-                    class="circle"
-                    cx="100"
-                    cy="100"
-                    fill="#0000ff"
-                    id="svg_4"
-                    r="120"
-                    transform-origin="100 100"
-                />
-                <g
-                    class="star"
-                    id="svg_2"
-                    transform-origin="100 100"
-                >
-                    <path
-                        d="m179.99999,39.89439l-79.5,141.79999l-79.5,-141.79999l158.99999,0l0.00001,0z"
-                        fill="#ff00ff"
-                        id="svg_6"
-                        transform-origin="100 100"
-                    />
-                    <path
-                        d="m21.5,160.84371l79.07142,-142.49997l79.07142,142.49997l-158.14285,0l0.00001,0z"
-                        fill="#ff00ff"
-                        id="svg_5"
-                        transform-origin="100 100"
-                    />
+            <g class="layer" transform="translate(312, 184)">
+                <g transform="scale(2)">
+                    <rect class="rect" fill="#191919" height="200" id="svg_1" width="200" transform-origin="100 100" />
+                    <circle class="circle" cx="100" cy="100" fill="#0000ff" id="svg_4" r="120" transform-origin="100 100" />
+                    <g class="star" id="svg_2" transform-origin="100 100">
+                        <path d="m179.99999,39.89439l-79.5,141.79999l-79.5,-141.79999l158.99999,0l0.00001,0z" fill="#ff00ff" id="svg_6" transform-origin="100 100" />
+                        <path d="m21.5,160.84371l79.07142,-142.49997l79.07142,142.49997l-158.14285,0l0.00001,0z" fill="#ff00ff" id="svg_5" transform-origin="100 100" />
+                    </g>
                 </g>
+
+                <text class="title" x="0" y="220">GEOMETRY PERSON</text>
+                <text class="subtitle" x="10" y="250">find your core personality type in shapes</text>
+
             </g>
         </svg>
     </div>
+    <div class="question1 inactive">
+        question11
+    </div>
     <script>
-        let svg = document.querySelector('svg');
-        svg.classList.add('active');
+        let beginDiv = document.querySelector('.begin');
+        let question1Div = document.querySelector('.question1');
+
+        function begin() {
+            beginDiv.classList.add('active');
+            setTimeout(() => {
+                document.querySelector('.begin').classList.add('switch');
+                setTimeout(() => {
+                    startQuestion1();
+                }, 1000);
+            }, 5000)
+        }
+
+        function startQuestion1() {
+            beginDiv.classList.remove('active');
+            beginDiv.classList.add('inactive');
+            question1Div.classList.remove('inactive');
+            // question1Div.classList.add('active');
+        }
+
+        begin();
+
     </script>
 </body>
 
