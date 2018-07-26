@@ -1,4 +1,5 @@
-$blue: #1469ff;
+$light-blue: #1469ff;
+$dark-blue: #0027c8;
 $windowWidth: 1024px;
 $windowHeight: 768px;
 html,
@@ -13,7 +14,7 @@ body {
   height: $windowHeight;
   align-items: center;
   justify-content: center;
-  background-color: $blue;
+  background-color: $light-blue;
 }
 
 %genericDiv {
@@ -132,4 +133,75 @@ body {
 
 .question1 {
   @extend %genericDiv;
+
+  .left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+  }
+
+  .right {
+    width: 60%;
+    height: 100%;
+    background-color: $dark-blue;
+  }
+}
+
+.question-content-width {
+  width: 380px;
+  margin: auto;
+}
+
+.question-number {
+  color: #ff3c82;
+  font-size: 64px;
+  text-align: left;
+}
+
+.question-number + .question-desc {
+  margin-top: 10px;
+}
+
+.question-desc + .choose-answer {
+  margin-top: 16px;
+}
+
+.choose-answer + .answers {
+  margin-top: 40px;
+}
+
+.question-desc {
+  color: white;
+  font-size: 36px;
+  text-align: left;
+}
+
+.choose-answer {
+  color: $dark-blue;
+  font-size: 24px;
+  text-align: left;
+}
+
+div.answers {
+  button {
+    border: 1px solid #ffffff;
+    border-radius: 30.5px;
+    width: 380px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-family: "Roboto-Regular";
+    font-size: 20px;
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  button + button {
+    margin-top: 16px;
+  }
+
+  button:hover {
+    color: $light-blue;
+    background-color: #ffffff;
+  }
 }
