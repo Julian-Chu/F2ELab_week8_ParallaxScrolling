@@ -29,10 +29,22 @@
 
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="triangle"></div>
+      <div class="rect"></div>
+      <div class="circle"></div>
+
+    </div>
 
   </div>
 
+  <script>
+    let q1Right = document.querySelector('.question1 .right');
+    setTimeout(() => {
+      q1Right.classList.add('active');
+    }, 2000);
+
+  </script>
 </body>
 
 </html>
