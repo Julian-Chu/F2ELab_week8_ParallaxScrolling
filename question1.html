@@ -33,16 +33,48 @@
       <div class="triangle"></div>
       <div class="rect"></div>
       <div class="circle"></div>
-
     </div>
+  </div>
+
+  <div class="question2 inactive">
+    <div class="left"></div>
+    <div class="right"></div>
 
   </div>
 
   <script>
     let q1Right = document.querySelector('.question1 .right');
-    setTimeout(() => {
+    let q1 = document.querySelector('.question1');
+    let q2 = document.querySelector('.question2');
+    let buttonsQ1 = Array.from(document.querySelectorAll('.question1 button'));
+
+    console.log(buttonsQ1);
+    buttonsQ1.map(button => {
+      button.addEventListener('click', () => {
+        answerQ1();
+      })
+    })
+
+    function startQ1() {
       q1Right.classList.add('active');
-    }, 2000);
+    }
+
+    function answerQ1() {
+      q1.classList.add('inactive');
+      q2.classList.remove('inactive');
+      q2.classList.add('start');
+
+      setTimeout(() => {
+        startQ2();
+      }, 2500);
+    }
+
+    function startQ2() {
+      q2.classList.remove('start');
+      // q2.classList.add('active');
+    }
+
+    startQ1();
 
   </script>
 </body>
