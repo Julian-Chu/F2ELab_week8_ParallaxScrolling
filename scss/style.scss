@@ -15,8 +15,7 @@ body {
   width: $windowWidth;
   height: $windowHeight;
   align-items: center;
-  justify-content: center;
-  background-color: $light-blue;
+  justify-content: center; // background-color: $light-blue;
 }
 
 %genericDiv {
@@ -135,6 +134,7 @@ body {
 
 .question1 {
   @extend %genericDiv;
+  background-color: $light-blue;
   .left {
     width: 60%;
     height: 100%;
@@ -331,6 +331,9 @@ div.answers {
   }
   .right {
     width: 60%;
+    position: absolute;
+    right: 10%;
+    top: 10%;
   }
 }
 
@@ -340,6 +343,14 @@ div.answers {
     background-color: $light-blue;
     animation: q1Toq2-ani 2s;
     animation-fill-mode: forwards;
+    div {
+      display: none;
+    }
+  }
+  .right {
+    * {
+      display: none;
+    }
   }
 }
 
