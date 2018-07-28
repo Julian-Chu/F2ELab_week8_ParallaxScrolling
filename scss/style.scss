@@ -329,11 +329,43 @@ div.answers {
     animation: left-flyin-ani 2s;
     animation-fill-mode: forwards;
   }
+  .left.active {
+    div.triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 73.5px 127.3px 73.5px;
+      border-color: transparent transparent #ffffff transparent;
+      right: 30px;
+      top: 320px;
+    }
+    div.rect {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background-color: #ff3c82;
+      top: 108px;
+      left: 69px;
+    }
+    div.circle {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background-color: #000000;
+      border-radius: 50%;
+      bottom: -220px;
+      right: -10px;
+    }
+  }
   .right {
-    width: 60%;
-    position: absolute;
-    right: 10%;
-    top: 10%;
+    width: 60%; // position: absolute;
+    // left: 27%;
+    // top: 10%;
+    display: flex;
+    .choose-answer {
+      color: $light-blue;
+    }
   }
 }
 
@@ -341,7 +373,7 @@ div.answers {
   .left {
     width: 60%;
     background-color: $light-blue;
-    animation: q1Toq2-ani 2s;
+    animation: q1End 2s;
     animation-fill-mode: forwards;
     div {
       display: none;
@@ -354,7 +386,7 @@ div.answers {
   }
 }
 
-@keyframes q1Toq2-ani {
+@keyframes q1End {
   from {
     width: 60%;
   }
@@ -365,9 +397,11 @@ div.answers {
 
 @keyframes left-flyin-ani {
   from {
-    width: 0%;
+    // width: 0%;
+    transform: translate(-100%);
   }
   to {
-    width: 40%;
+    // width: 40%;
+    transform: translate(0);
   }
 }
