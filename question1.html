@@ -91,6 +91,9 @@
     function startQ2() {
       q2.classList.remove('start');
       // q2.classList.add('active');
+      setTimeout(() => {
+        document.querySelector('.question2 .left').classList.add("active");
+      }, 2000);
     }
 
     startQ1();

@@ -3,7 +3,7 @@ $dark-blue: #0027c8;
 $pink:#ff3c82;
 $windowWidth: 1024px;
 $windowHeight: 768px;
-$q1-animation-time: 5s;
+$q-animation-time: 5s;
 html,
 body {
   margin: 0;
@@ -177,18 +177,18 @@ body {
 
 .question1>.right.active {
   .rect {
-    animation: q1-rect-ani $q1-animation-time;
+    animation: q1-rect-ani $q-animation-time;
     animation-fill-mode: forwards;
   }
   .triangle {
-    animation: q1-tri-ani $q1-animation-time;
+    animation: q1-tri-ani $q-animation-time;
     animation-fill-mode: forwards;
   }
   .circle {
-    animation: q1-circle-ani $q1-animation-time;
+    animation: q1-circle-ani $q-animation-time;
     animation-fill-mode: forwards;
   }
-  animation: right-flyin-ani $q1-animation-time;
+  animation: right-flyin-ani $q-animation-time;
   animation-fill-mode: forwards;
 }
 
@@ -328,34 +328,39 @@ div.answers {
     background-color: $pink; // animation: left-flyin-in 2s;
     animation: left-flyin-ani 2s;
     animation-fill-mode: forwards;
-  }
-  .left.active {
-    div.triangle {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 73.5px 127.3px 73.5px;
-      border-color: transparent transparent #ffffff transparent;
-      right: 30px;
-      top: 320px;
-    }
-    div.rect {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      background-color: #ff3c82;
-      top: 108px;
-      left: 69px;
-    }
-    div.circle {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background-color: #000000;
-      border-radius: 50%;
-      bottom: -220px;
-      right: -10px;
+    &.active {
+      div.triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent transparent #ffffff transparent;
+        border-width: 0 175px 303.1px 175px;
+        left: 30px;
+        top: -140px;
+        transform: rotate(30deg);
+        animation: q2-tri-ani $q-animation-time;
+      }
+      div.rect {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background-color: $light-blue;
+        top: 240px;
+        left: -150px;
+        transform: rotate(55deg);
+        animation: q2-rect-ani $q-animation-time;
+      }
+      div.circle {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        background-color: #000000;
+        border-radius: 50%;
+        bottom: 150px;
+        left: 100px;
+        animation: q2-circle-ani $q-animation-time;
+      }
     }
   }
   .right {
@@ -367,21 +372,20 @@ div.answers {
       color: $light-blue;
     }
   }
-}
-
-.question2.start {
-  .left {
-    width: 60%;
-    background-color: $light-blue;
-    animation: q1End 2s;
-    animation-fill-mode: forwards;
-    div {
-      display: none;
+  &.start {
+    .left {
+      width: 60%;
+      background-color: $light-blue;
+      animation: q1End 2s;
+      animation-fill-mode: forwards;
+      div {
+        display: none;
+      }
     }
-  }
-  .right {
-    * {
-      display: none;
+    .right {
+      * {
+        display: none;
+      }
     }
   }
 }
@@ -403,5 +407,50 @@ div.answers {
   to {
     // width: 40%;
     transform: translate(0);
+  }
+}
+
+@keyframes q2-tri-ani {
+  0% {
+    transform: translate(0, 1100px);
+  }
+  40% {
+    transform: translate(0, 0px);
+  }
+  60% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(750deg);
+  }
+}
+
+@keyframes q2-rect-ani {
+  0% {
+    transform: translate(0, 600px);
+  }
+  40% {
+    transform: translate(0, 0px);
+  }
+  60% {
+    transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(-665deg);
+  }
+}
+
+@keyframes q2-circle-ani {
+  0% {
+    transform: translate(0, 400px);
+  }
+  40% {
+    transform: translate(0, 0px);
+  }
+  60% {
+    transform: translate(-10px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
