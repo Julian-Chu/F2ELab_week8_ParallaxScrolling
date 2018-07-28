@@ -60,17 +60,25 @@
     </div>
 
   </div>
+  <div class="all-done inactive"></div>
 
   <script>
     let q1Right = document.querySelector('.question1 .right');
     let q1 = document.querySelector('.question1');
     let q2 = document.querySelector('.question2');
+    let allDonePage = document.querySelector('.all-done');
     let buttonsQ1 = Array.from(document.querySelectorAll('.question1 button'));
+    let buttonsQ2 = Array.from(document.querySelectorAll('.question2 button'));
 
-    console.log(buttonsQ1);
     buttonsQ1.map(button => {
       button.addEventListener('click', () => {
         answerQ1();
+      })
+    })
+
+    buttonsQ2.map(button => {
+      button.addEventListener('click', () => {
+        answerQ2();
       })
     })
 
@@ -94,6 +102,18 @@
       setTimeout(() => {
         document.querySelector('.question2 .left').classList.add("active");
       }, 2000);
+    }
+
+    function answerQ2() {
+      q2.classList.add('end');
+
+      setTimeout(() => {
+        q2.classList.remove('end');
+        q2.classList.add('inactive');
+        allDonePage.classList.remove('inactive');
+
+
+      }, 2500);
     }
 
     startQ1();

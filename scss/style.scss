@@ -324,6 +324,7 @@ div.answers {
   @extend %genericDiv;
   background-color: $dark-blue;
   .left {
+    transition: width 2s;
     width: 40%;
     background-color: $pink; // animation: left-flyin-in 2s;
     animation: left-flyin-ani 2s;
@@ -386,6 +387,17 @@ div.answers {
       * {
         display: none;
       }
+    }
+  }
+  &.end {
+    .left {
+      width: 0%;
+      * {
+        display: none;
+      }
+    }
+    .right {
+      display: none;
     }
   }
 }
@@ -453,4 +465,9 @@ div.answers {
   100% {
     transform: translate(0, 0);
   }
+}
+
+.all-done {
+  @extend %genericDiv;
+  background-color: $dark-blue;
 }
