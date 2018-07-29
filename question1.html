@@ -163,8 +163,18 @@
     <div class="rect rect48"></div>
     <div class="rect rect49"></div>
     <div class="rect rect50"></div>
+  </div>
+  <div class="result inactive">
 
-
+    <div class="small-rect pink small-rect1"></div>
+    <div class="small-rect pink small-rect2"></div>
+    <div class="small-rect pink small-rect3"></div>
+    <div class="small-rect black small-rect4"></div>
+    <div class="small-rect black small-rect5"></div>
+    <div class="small-rect black small-rect6"></div>
+    <div class="white-rect"></div>
+    <div class="pink-rect"></div>
+    <div class="black-rect"></div>
   </div>
 
   <script>
@@ -174,6 +184,7 @@
     let allDonePage = document.querySelector('.all-done');
     let buttonsQ1 = Array.from(document.querySelectorAll('.question1 button'));
     let buttonsQ2 = Array.from(document.querySelectorAll('.question2 button'));
+    let resultPage = document.querySelector('.result');
 
     buttonsQ1.map(button => {
       button.addEventListener('click', () => {
@@ -192,7 +203,15 @@
       let ani1 = document.querySelector('.ani-1');
       let circles = Array.from(document.querySelectorAll('.all-done .circle'));
       let rects = Array.from(document.querySelectorAll('.all-done .rect'));
-      if (window.pageYOffset > 2500) {
+      if (window.pageYOffset > 3000) {
+        allDonePage.classList.remove('active');
+        allDonePage.classList.add('end');
+
+        setTimeout(() => {
+          switchToResult();
+        }, 1000)
+
+      } else if (window.pageYOffset > 2000) {
         circles.map(circle => {
           circle.classList.remove('active');
         })
@@ -252,6 +271,19 @@
 
     function startAllDone() {
       allDonePage.classList.add('active');
+    }
+
+    function switchToResult() {
+      allDonePage.classList.add('inactive');
+      resultPage.classList.remove('inactive');
+
+      setTimeout(() => {
+        startResult();
+      }, 1000)
+    }
+
+    function startResult() {
+      resultPage.classList.add('active');
     }
 
     startQ1();

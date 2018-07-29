@@ -1,17 +1,17 @@
 $light-blue: #1469ff;
 $dark-blue: #0027c8;
-$pink:#ff3c82;
+$pink: #ff3c82;
 $windowWidth: 1024px;
 $windowHeight: 768px;
 $q-animation-time: 5s;
 %title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 64px;
   font-weight: bold;
 }
 
 %subtitle {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: 400;
 }
@@ -22,6 +22,7 @@ body {
   padding: 0;
 }
 
+html,
 body {
   display: flex;
   width: $windowWidth;
@@ -188,7 +189,7 @@ body {
   }
 }
 
-.question1>.right.active {
+.question1 > .right.active {
   .rect {
     animation: q1-rect-ani $q-animation-time;
     animation-fill-mode: forwards;
@@ -287,15 +288,15 @@ body {
   text-align: left;
 }
 
-.question-number+.question-desc {
+.question-number + .question-desc {
   margin-top: 10px;
 }
 
-.question-desc+.choose-answer {
+.question-desc + .choose-answer {
   margin-top: 16px;
 }
 
-.choose-answer+.answers {
+.choose-answer + .answers {
   margin-top: 40px;
 }
 
@@ -324,7 +325,7 @@ div.answers {
     color: #ffffff;
     background-color: transparent;
   }
-  button+button {
+  button + button {
     margin-top: 16px;
   }
   button:hover {
@@ -486,6 +487,7 @@ div.answers {
   overflow: auto;
   background-color: $light-blue;
   color: #ffffff;
+  transition: opacity 2s;
   div {
     opacity: 0;
     transition: opacity 1s;
@@ -509,6 +511,10 @@ div.answers {
     left: 38%;
     z-index: 10;
   }
+
+  &.end {
+    opacity: 0.2;
+  }
 }
 
 .ani-1 {
@@ -520,8 +526,8 @@ div.answers {
   .rect#{$i}.active {
     position: fixed;
     background-color: $pink;
-    bottom: -10%*random(20);
-    left: 5%*random(20);
+    bottom: -10% * random(20);
+    left: 5% * random(20);
     width: 5px * $i;
     height: 5px * $i;
     animation: circle-fly 3s forwards;
@@ -533,8 +539,8 @@ div.answers {
   .circle#{$i}.active {
     position: fixed;
     background-color: $dark-blue;
-    bottom: -10%*random(20);
-    left: 5%*random(20);
+    bottom: -10% * random(20);
+    left: 5% * random(20);
     width: 5px * $i;
     height: 5px * $i;
     border-radius: 50%;
@@ -549,5 +555,76 @@ div.answers {
   }
   to {
     transform: translate(400%, -2000%);
+  }
+}
+
+.result {
+  @extend %genericDiv;
+  background-color: $dark-blue;
+  width: 100%;
+  overflow: auto;
+  .small-rect {
+    display: none;
+  }
+
+  &.active {
+    .small-rect {
+      display: block;
+      animation: falldown 2s;
+    }
+  }
+}
+
+.small-rect {
+  position: absolute;
+  width: 37.5px;
+  height: 37.5px;
+  transform: rotate(45deg);
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.small-rect1 {
+  top: -26px;
+  left: 32px;
+}
+.small-rect2 {
+  top: 97px;
+  left: 259px;
+}
+.small-rect3 {
+  top: 213px;
+  left: 853px;
+}
+
+.small-rect4 {
+  top: 279px;
+  left: 58px;
+}
+
+.small-rect5 {
+  top: -13px;
+  left: 733px;
+}
+
+.small-rect6 {
+  top: 123px;
+  left: 998px;
+  overflow: hidden;
+}
+
+@keyframes falldown {
+  from {
+    transform: translate(0, -400px) rotate(45deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(45deg);
   }
 }
