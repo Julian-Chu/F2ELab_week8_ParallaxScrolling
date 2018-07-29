@@ -42,6 +42,7 @@ body {
 
 .begin {
   @extend %genericDiv;
+  background-color: $light-blue;
 }
 
 .begin.switch {
@@ -591,6 +592,11 @@ div.answers {
     transition: opacity 2s, top 2s, left 2s;
   }
 
+  .item {
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
   &.active {
     .small-rect {
       display: block;
@@ -653,6 +659,10 @@ div.answers {
           height: 289px;
           transform: translate(-150px, -120px) rotate(15deg);
         }
+      }
+
+      .item {
+        opacity: 1;
       }
       %item {
         position: absolute;
