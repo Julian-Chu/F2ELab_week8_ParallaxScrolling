@@ -177,6 +177,9 @@
     <div class="normal-rect white normal-rect3"></div>
     <div class="title">RECTANGLE</div>
     <div class="subtitle">Your personality type is</div>
+    <div class="item1">ENERGETIC</div>
+    <div class="item2">FRIENDLY</div>
+    <div class="item3">INTELLIGENT</div>
   </div>
 
   <script>
@@ -286,6 +289,16 @@
 
     function startResult() {
       resultPage.classList.add('active');
+
+      setTimeout(() => {
+        showResultDetail()
+      }, 3000)
+    }
+
+    function showResultDetail() {
+      resultPage.classList.add('detail');
+
+
     }
 
     startQ1();

@@ -579,7 +579,7 @@ div.answers {
     top: 263px;
     left: 326px;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 2s, top 2s, left 2s;
   }
   .subtitle {
     @extend %subtitle;
@@ -588,7 +588,7 @@ div.answers {
     top: 229px;
     left: 390px;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 2s, top 2s, left 2s;
   }
 
   &.active {
@@ -600,11 +600,83 @@ div.answers {
     .normal-rect {
       display: block;
       animation: raiseup 2s;
+      transition: all 2s;
     }
 
     .title,
     .subtitle {
       opacity: 1;
+    }
+
+    &.detail {
+      .small-rect4,
+      .small-rect5,
+      .small-rect6 {
+        display: none;
+      }
+
+      .small-rect1 {
+        animation: small-rect1-detail 2s forwards;
+      }
+
+      .small-rect2 {
+        animation: small-rect2-detail 2s forwards;
+      }
+      .small-rect3 {
+        animation: small-rect3-detail 2s forwards;
+      }
+
+      .title {
+        top: 125px;
+        left: 522px;
+      }
+
+      .subtitle {
+        top: 81px;
+        left: 522px;
+      }
+
+      .normal-rect {
+        width: 289px;
+        height: 289px;
+        // transform: translate(-200px, -120px);
+        &.normal-rect3 {
+          width: 289px;
+          height: 289px;
+          transform: translate(-180px, -40px) rotate(-15deg);
+        }
+        &.normal-rect2 {
+          transform: translate(-200px, -150px);
+        }
+        &.normal-rect1 {
+          width: 289px;
+          height: 289px;
+          transform: translate(-150px, -120px) rotate(15deg);
+        }
+      }
+      %item {
+        position: absolute;
+        font-family: "Roboto";
+        font-size: 36px;
+        font-weight: bold;
+        color: $pink;
+        left: 601px;
+      }
+
+      .item1 {
+        @extend %item;
+        top: 240px;
+      }
+
+      .item2 {
+        @extend %item;
+        top: 328px;
+      }
+
+      .item3 {
+        @extend %item;
+        top: 416px;
+      }
     }
   }
 }
@@ -629,12 +701,12 @@ div.answers {
   left: 32px;
 }
 .small-rect2 {
-  top: 97px;
-  left: 259px;
+  top: 97px; //326px   229px
+  left: 259px; //525px   266px
 }
 .small-rect3 {
-  top: 213px;
-  left: 853px;
+  top: 213px; //414px 201px;
+  left: 853px; // -328px
 }
 
 .small-rect4 {
@@ -683,6 +755,7 @@ div.answers {
   border: 2px solid #ffffff;
   top: 371px;
   left: 313px;
+  transition: all 2s;
 }
 
 .normal-rect2 {
@@ -697,4 +770,33 @@ div.answers {
   top: 396px;
   left: 259px;
   background-color: #000000;
+}
+
+@keyframes small-rect1-detail {
+  from {
+    transform: translate(0, 0) rotate(45deg);
+  }
+
+  to {
+    transform: translate(493px, 264px) rotate(45deg);
+  }
+}
+@keyframes small-rect2-detail {
+  from {
+    transform: translate(0, 0) rotate(45deg);
+  }
+
+  to {
+    transform: translate(266px, 229px) rotate(45deg);
+  }
+}
+
+@keyframes small-rect3-detail {
+  from {
+    transform: translate(0, 0) rotate(45deg);
+  }
+
+  to {
+    transform: translate(-328px, 201px) rotate(45deg);
+  }
 }
