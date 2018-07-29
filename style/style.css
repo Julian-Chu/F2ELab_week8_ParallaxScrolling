@@ -1,0 +1,2439 @@
+.all-done .title, .result .title {
+  font-family: "Roboto";
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.all-done .subtitle, .result .subtitle {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 400;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
+  height: 768px;
+}
+
+.begin, .question1, .question2, .all-done, .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.begin {
+  background-color: #1469ff;
+}
+
+.begin.switch {
+  -webkit-animation: beginEnd 2s;
+          animation: beginEnd 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.inactive {
+  display: none;
+}
+
+.svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+@-webkit-keyframes beginEnd {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes beginEnd {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateStar {
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+@keyframes rotateStar {
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+@-webkit-keyframes rotateRect {
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(-720deg);
+            transform: rotate(-720deg);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+@keyframes rotateRect {
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(-720deg);
+            transform: rotate(-720deg);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+@-webkit-keyframes scaleCircle {
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  85% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  95% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+@keyframes scaleCircle {
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  85% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  95% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+  }
+}
+
+.begin.active .rect {
+  -webkit-animation: rotateRect 5s;
+          animation: rotateRect 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.begin.active .circle {
+  -webkit-animation: scaleCircle 5s;
+          animation: scaleCircle 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.begin.active .star {
+  -webkit-animation: rotateStar 5s;
+          animation: rotateStar 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.svg .title {
+  font-family: Roboto-Bold;
+  font-size: 64px;
+  fill: #ffffff;
+  text-align: center;
+  -webkit-transform: translate(-10%, 0);
+          transform: translate(-10%, 0);
+}
+
+.svg .subtitle {
+  font-family: Roboto-Bold;
+  font-size: 24px;
+  fill: #ffffff;
+  text-align: center;
+}
+
+.question1 {
+  overflow: hidden;
+  background-color: #1469ff;
+}
+
+.question1 .left {
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.question1 .right {
+  width: 40%;
+  height: 100%;
+  background-color: #0027c8;
+  position: relative;
+}
+
+.question1 .right div.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 73.5px 127.3px 73.5px;
+  border-color: transparent transparent #ffffff transparent;
+  right: 30px;
+  top: 320px;
+}
+
+.question1 .right div.rect {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: #ff3c82;
+  top: 108px;
+  left: 69px;
+}
+
+.question1 .right div.circle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #000000;
+  border-radius: 50%;
+  bottom: -220px;
+  right: -10px;
+}
+
+.question1 > .right.active {
+  -webkit-animation: right-flyin-ani 5s;
+          animation: right-flyin-ani 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.question1 > .right.active .rect {
+  -webkit-animation: q1-rect-ani 5s;
+          animation: q1-rect-ani 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.question1 > .right.active .triangle {
+  -webkit-animation: q1-tri-ani 5s;
+          animation: q1-tri-ani 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.question1 > .right.active .circle {
+  -webkit-animation: q1-circle-ani 5s;
+          animation: q1-circle-ani 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes q1-rect-ani {
+  0% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  20% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes q1-rect-ani {
+  0% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  20% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes q1-tri-ani {
+  0% {
+    -webkit-transform: translate(0, 450px);
+            transform: translate(0, 450px);
+  }
+  25% {
+    -webkit-transform: translate(0, 450px);
+            transform: translate(0, 450px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes q1-tri-ani {
+  0% {
+    -webkit-transform: translate(0, 450px);
+            transform: translate(0, 450px);
+  }
+  25% {
+    -webkit-transform: translate(0, 450px);
+            transform: translate(0, 450px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes q1-circle-ani {
+  0% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  20% {
+    -webkit-transform: translate(0, 400px);
+            transform: translate(0, 400px);
+  }
+  30% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+  }
+  80% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes q1-circle-ani {
+  0% {
+    -webkit-transform: translate(0, 700px);
+            transform: translate(0, 700px);
+  }
+  20% {
+    -webkit-transform: translate(0, 400px);
+            transform: translate(0, 400px);
+  }
+  30% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+  }
+  80% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@-webkit-keyframes right-flyin-ani {
+  0% {
+    -webkit-transform: translate(600px);
+            transform: translate(600px);
+  }
+  20% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes right-flyin-ani {
+  0% {
+    -webkit-transform: translate(600px);
+            transform: translate(600px);
+  }
+  20% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+.question-content-width {
+  width: 380px;
+  margin: auto;
+}
+
+.question-number {
+  color: #ff3c82;
+  font-size: 64px;
+  text-align: left;
+}
+
+.question-number + .question-desc {
+  margin-top: 10px;
+}
+
+.question-desc + .choose-answer {
+  margin-top: 16px;
+}
+
+.choose-answer + .answers {
+  margin-top: 40px;
+}
+
+.question-desc {
+  color: white;
+  font-size: 36px;
+  text-align: left;
+}
+
+.choose-answer {
+  color: #0027c8;
+  font-size: 24px;
+  text-align: left;
+}
+
+div.answers button {
+  border: 1px solid #ffffff;
+  border-radius: 30.5px;
+  width: 380px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  font-family: "Roboto-Regular";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+div.answers button + button {
+  margin-top: 16px;
+}
+
+div.answers button:hover {
+  color: #1469ff;
+  background-color: #ffffff;
+}
+
+.question2 {
+  background-color: #0027c8;
+}
+
+.question2 .left {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  width: 40%;
+  background-color: #ff3c82;
+  -webkit-animation: left-flyin-ani 2s;
+          animation: left-flyin-ani 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.question2 .left.active div.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 175px 303.1px 175px;
+  left: 30px;
+  top: -140px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-animation: q2-tri-ani 5s;
+          animation: q2-tri-ani 5s;
+}
+
+.question2 .left.active div.rect {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #1469ff;
+  top: 240px;
+  left: -150px;
+  -webkit-transform: rotate(55deg);
+          transform: rotate(55deg);
+  -webkit-animation: q2-rect-ani 5s;
+          animation: q2-rect-ani 5s;
+}
+
+.question2 .left.active div.circle {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  background-color: #000000;
+  border-radius: 50%;
+  bottom: 150px;
+  left: 100px;
+  -webkit-animation: q2-circle-ani 5s;
+          animation: q2-circle-ani 5s;
+}
+
+.question2 .right {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.question2 .right .choose-answer {
+  color: #1469ff;
+}
+
+.question2.start .left {
+  width: 60%;
+  background-color: #1469ff;
+  -webkit-animation: q1End 2s;
+          animation: q1End 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.question2.start .left div {
+  display: none;
+}
+
+.question2.start .right * {
+  display: none;
+}
+
+.question2.end .left {
+  width: 0%;
+}
+
+.question2.end .left * {
+  display: none;
+}
+
+.question2.end .right {
+  display: none;
+}
+
+@-webkit-keyframes q1End {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes q1End {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes left-flyin-ani {
+  from {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes left-flyin-ani {
+  from {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes q2-tri-ani {
+  0% {
+    -webkit-transform: translate(0, 1100px);
+            transform: translate(0, 1100px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(750deg);
+            transform: rotate(750deg);
+  }
+}
+
+@keyframes q2-tri-ani {
+  0% {
+    -webkit-transform: translate(0, 1100px);
+            transform: translate(0, 1100px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(750deg);
+            transform: rotate(750deg);
+  }
+}
+
+@-webkit-keyframes q2-rect-ani {
+  0% {
+    -webkit-transform: translate(0, 600px);
+            transform: translate(0, 600px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+  }
+  100% {
+    -webkit-transform: rotate(-665deg);
+            transform: rotate(-665deg);
+  }
+}
+
+@keyframes q2-rect-ani {
+  0% {
+    -webkit-transform: translate(0, 600px);
+            transform: translate(0, 600px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: rotate(55deg);
+            transform: rotate(55deg);
+  }
+  100% {
+    -webkit-transform: rotate(-665deg);
+            transform: rotate(-665deg);
+  }
+}
+
+@-webkit-keyframes q2-circle-ani {
+  0% {
+    -webkit-transform: translate(0, 400px);
+            transform: translate(0, 400px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: translate(-10px, -20px);
+            transform: translate(-10px, -20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes q2-circle-ani {
+  0% {
+    -webkit-transform: translate(0, 400px);
+            transform: translate(0, 400px);
+  }
+  40% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  60% {
+    -webkit-transform: translate(-10px, -20px);
+            transform: translate(-10px, -20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.all-done {
+  height: 5000px;
+  overflow: auto;
+  background-color: #1469ff;
+  color: #ffffff;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.all-done div {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.all-done.active div {
+  opacity: 1;
+}
+
+.all-done .title {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  z-index: 10;
+}
+
+.all-done .subtitle {
+  position: fixed;
+  top: 50%;
+  left: 38%;
+  z-index: 10;
+}
+
+.all-done.end {
+  opacity: 0.2;
+}
+
+.ani-1 {
+  position: absolute;
+  top: 1000px;
+}
+
+.rect1.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -190%;
+  left: 100%;
+  width: 5px;
+  height: 5px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect2.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -110%;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect3.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -160%;
+  left: 75%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect4.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -50%;
+  left: 75%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect5.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -140%;
+  left: 85%;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect6.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -190%;
+  left: 25%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect7.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -70%;
+  left: 20%;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect8.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -30%;
+  left: 40%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect9.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -30%;
+  left: 100%;
+  width: 45px;
+  height: 45px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect10.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -180%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect11.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -110%;
+  left: 10%;
+  width: 55px;
+  height: 55px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect12.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -20%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect13.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -100%;
+  left: 10%;
+  width: 65px;
+  height: 65px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect14.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -60%;
+  left: 35%;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect15.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -60%;
+  left: 75%;
+  width: 75px;
+  height: 75px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect16.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -10%;
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect17.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -120%;
+  left: 35%;
+  width: 85px;
+  height: 85px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect18.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -120%;
+  left: 100%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect19.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -10%;
+  left: 10%;
+  width: 95px;
+  height: 95px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect20.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -180%;
+  left: 95%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect21.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -170%;
+  left: 5%;
+  width: 105px;
+  height: 105px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect22.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -140%;
+  left: 60%;
+  width: 110px;
+  height: 110px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect23.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -150%;
+  left: 90%;
+  width: 115px;
+  height: 115px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect24.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -170%;
+  left: 35%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect25.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -150%;
+  left: 45%;
+  width: 125px;
+  height: 125px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect26.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -130%;
+  left: 85%;
+  width: 130px;
+  height: 130px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect27.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -60%;
+  left: 30%;
+  width: 135px;
+  height: 135px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect28.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -80%;
+  left: 20%;
+  width: 140px;
+  height: 140px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect29.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -130%;
+  left: 15%;
+  width: 145px;
+  height: 145px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect30.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -10%;
+  left: 30%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect31.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -120%;
+  left: 80%;
+  width: 155px;
+  height: 155px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect32.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -30%;
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect33.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -180%;
+  left: 60%;
+  width: 165px;
+  height: 165px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect34.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -180%;
+  left: 55%;
+  width: 170px;
+  height: 170px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect35.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -190%;
+  left: 85%;
+  width: 175px;
+  height: 175px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect36.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -170%;
+  left: 45%;
+  width: 180px;
+  height: 180px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect37.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -80%;
+  left: 5%;
+  width: 185px;
+  height: 185px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect38.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -60%;
+  left: 85%;
+  width: 190px;
+  height: 190px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect39.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -200%;
+  left: 40%;
+  width: 195px;
+  height: 195px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect40.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -160%;
+  left: 75%;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect41.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -160%;
+  left: 90%;
+  width: 205px;
+  height: 205px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect42.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -150%;
+  left: 25%;
+  width: 210px;
+  height: 210px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect43.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -120%;
+  left: 100%;
+  width: 215px;
+  height: 215px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect44.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -50%;
+  left: 75%;
+  width: 220px;
+  height: 220px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect45.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -130%;
+  left: 5%;
+  width: 225px;
+  height: 225px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect46.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -20%;
+  left: 45%;
+  width: 230px;
+  height: 230px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect47.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -20%;
+  left: 15%;
+  width: 235px;
+  height: 235px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect48.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -70%;
+  left: 100%;
+  width: 240px;
+  height: 240px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect49.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -70%;
+  left: 30%;
+  width: 245px;
+  height: 245px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.rect50.active {
+  position: fixed;
+  background-color: #ff3c82;
+  bottom: -60%;
+  left: 65%;
+  width: 250px;
+  height: 250px;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle1.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -130%;
+  left: 85%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle2.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -20%;
+  left: 35%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle3.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -200%;
+  left: 35%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle4.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 80%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle5.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -30%;
+  left: 80%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle6.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -140%;
+  left: 40%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle7.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -120%;
+  left: 65%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle8.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -170%;
+  left: 35%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle9.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -110%;
+  left: 90%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle10.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -10%;
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle11.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -200%;
+  left: 15%;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle12.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -80%;
+  left: 55%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle13.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -110%;
+  left: 100%;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle14.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 40%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle15.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -20%;
+  left: 20%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle16.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -10%;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle17.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -190%;
+  left: 75%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle18.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -10%;
+  left: 20%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle19.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -60%;
+  left: 90%;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle20.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -120%;
+  left: 65%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle21.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 90%;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle22.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -40%;
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle23.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -160%;
+  left: 30%;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle24.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -170%;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle25.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -180%;
+  left: 15%;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle26.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -90%;
+  left: 70%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle27.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -70%;
+  left: 75%;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle28.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -40%;
+  left: 75%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle29.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 75%;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle30.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -40%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle31.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -190%;
+  left: 65%;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle32.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -170%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle33.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -80%;
+  left: 5%;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle34.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -110%;
+  left: 45%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle35.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -140%;
+  left: 35%;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle36.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -30%;
+  left: 95%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle37.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -70%;
+  left: 25%;
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle38.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -140%;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle39.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -70%;
+  left: 5%;
+  width: 195px;
+  height: 195px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle40.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -140%;
+  left: 75%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle41.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -90%;
+  left: 30%;
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle42.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 95%;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle43.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -60%;
+  left: 25%;
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle44.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -30%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle45.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -120%;
+  left: 75%;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle46.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -160%;
+  left: 45%;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle47.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -50%;
+  left: 70%;
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle48.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -200%;
+  left: 65%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle49.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -170%;
+  left: 20%;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+.circle50.active {
+  position: fixed;
+  background-color: #0027c8;
+  bottom: -100%;
+  left: 15%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-animation: circle-fly 3s forwards;
+          animation: circle-fly 3s forwards;
+  z-index: 1;
+}
+
+@-webkit-keyframes circle-fly {
+  from {
+    -webkit-transform: translate(-200%, 100%);
+            transform: translate(-200%, 100%);
+  }
+  to {
+    -webkit-transform: translate(400%, -2000%);
+            transform: translate(400%, -2000%);
+  }
+}
+
+@keyframes circle-fly {
+  from {
+    -webkit-transform: translate(-200%, 100%);
+            transform: translate(-200%, 100%);
+  }
+  to {
+    -webkit-transform: translate(400%, -2000%);
+            transform: translate(400%, -2000%);
+  }
+}
+
+.result {
+  background-color: #0027c8;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.result .small-rect {
+  display: none;
+}
+
+.result .normal-rect {
+  display: none;
+}
+
+.result .title {
+  position: absolute;
+  color: #ffffff;
+  top: 263px;
+  left: 326px;
+  opacity: 0;
+  -webkit-transition: opacity 2s, top 2s, left 2s;
+  transition: opacity 2s, top 2s, left 2s;
+}
+
+.result .subtitle {
+  position: absolute;
+  color: #ffffff;
+  top: 229px;
+  left: 390px;
+  opacity: 0;
+  -webkit-transition: opacity 2s, top 2s, left 2s;
+  transition: opacity 2s, top 2s, left 2s;
+}
+
+.result .item {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.result.active .small-rect {
+  display: block;
+  -webkit-animation: falldown 2s;
+          animation: falldown 2s;
+}
+
+.result.active .normal-rect {
+  display: block;
+  -webkit-animation: raiseup 2s;
+          animation: raiseup 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.result.active .title,
+.result.active .subtitle {
+  opacity: 1;
+}
+
+.result.active.detail .small-rect4,
+.result.active.detail .small-rect5,
+.result.active.detail .small-rect6 {
+  display: none;
+}
+
+.result.active.detail .small-rect1 {
+  -webkit-animation: small-rect1-detail 2s forwards;
+          animation: small-rect1-detail 2s forwards;
+}
+
+.result.active.detail .small-rect2 {
+  -webkit-animation: small-rect2-detail 2s forwards;
+          animation: small-rect2-detail 2s forwards;
+}
+
+.result.active.detail .small-rect3 {
+  -webkit-animation: small-rect3-detail 2s forwards;
+          animation: small-rect3-detail 2s forwards;
+}
+
+.result.active.detail .title {
+  top: 125px;
+  left: 522px;
+}
+
+.result.active.detail .subtitle {
+  top: 81px;
+  left: 522px;
+}
+
+.result.active.detail .normal-rect {
+  width: 289px;
+  height: 289px;
+}
+
+.result.active.detail .normal-rect.normal-rect3 {
+  width: 289px;
+  height: 289px;
+  -webkit-transform: translate(-180px, -40px) rotate(-15deg);
+          transform: translate(-180px, -40px) rotate(-15deg);
+}
+
+.result.active.detail .normal-rect.normal-rect2 {
+  -webkit-transform: translate(-200px, -150px);
+          transform: translate(-200px, -150px);
+}
+
+.result.active.detail .normal-rect.normal-rect1 {
+  width: 289px;
+  height: 289px;
+  -webkit-transform: translate(-150px, -120px) rotate(15deg);
+          transform: translate(-150px, -120px) rotate(15deg);
+}
+
+.result.active.detail .item {
+  opacity: 1;
+}
+
+.result.active.detail .item1, .result.active.detail .item2, .result.active.detail .item3 {
+  position: absolute;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff3c82;
+  left: 601px;
+}
+
+.result.active.detail .item1 {
+  top: 240px;
+}
+
+.result.active.detail .item2 {
+  top: 328px;
+}
+
+.result.active.detail .item3 {
+  top: 416px;
+}
+
+.small-rect {
+  position: absolute;
+  width: 37.5px;
+  height: 37.5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.pink {
+  background-color: #ff3c82;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.small-rect1 {
+  top: -26px;
+  left: 32px;
+}
+
+.small-rect2 {
+  top: 97px;
+  left: 259px;
+}
+
+.small-rect3 {
+  top: 213px;
+  left: 853px;
+}
+
+.small-rect4 {
+  top: 279px;
+  left: 58px;
+}
+
+.small-rect5 {
+  top: -13px;
+  left: 733px;
+}
+
+.small-rect6 {
+  top: 123px;
+  left: 998px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes falldown {
+  from {
+    -webkit-transform: translate(0, -400px) rotate(45deg);
+            transform: translate(0, -400px) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+}
+
+@keyframes falldown {
+  from {
+    -webkit-transform: translate(0, -400px) rotate(45deg);
+            transform: translate(0, -400px) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes raiseup {
+  from {
+    -webkit-transform: translate(0, 500px);
+            transform: translate(0, 500px);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes raiseup {
+  from {
+    -webkit-transform: translate(0, 500px);
+            transform: translate(0, 500px);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.normal-rect3, .normal-rect2, .normal-rect1 {
+  width: 440px;
+  height: 440px;
+  position: absolute;
+}
+
+.normal-rect3 {
+  border: 2px solid #ffffff;
+  top: 371px;
+  left: 313px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.normal-rect2 {
+  top: 418px;
+  left: 293px;
+  background-color: #ff3c82;
+}
+
+.normal-rect1 {
+  top: 396px;
+  left: 259px;
+  background-color: #000000;
+}
+
+@-webkit-keyframes small-rect1-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(493px, 264px) rotate(45deg);
+            transform: translate(493px, 264px) rotate(45deg);
+  }
+}
+
+@keyframes small-rect1-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(493px, 264px) rotate(45deg);
+            transform: translate(493px, 264px) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes small-rect2-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(266px, 229px) rotate(45deg);
+            transform: translate(266px, 229px) rotate(45deg);
+  }
+}
+
+@keyframes small-rect2-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(266px, 229px) rotate(45deg);
+            transform: translate(266px, 229px) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes small-rect3-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(-328px, 201px) rotate(45deg);
+            transform: translate(-328px, 201px) rotate(45deg);
+  }
+}
+
+@keyframes small-rect3-detail {
+  from {
+    -webkit-transform: translate(0, 0) rotate(45deg);
+            transform: translate(0, 0) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(-328px, 201px) rotate(45deg);
+            transform: translate(-328px, 201px) rotate(45deg);
+  }
+}
