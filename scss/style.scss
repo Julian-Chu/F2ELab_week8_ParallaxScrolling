@@ -572,6 +572,25 @@ div.answers {
     display: none;
   }
 
+  .title {
+    @extend %title;
+    position: absolute;
+    color: #ffffff;
+    top: 263px;
+    left: 326px;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  .subtitle {
+    @extend %subtitle;
+    position: absolute;
+    color: #ffffff;
+    top: 229px;
+    left: 390px;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
   &.active {
     .small-rect {
       display: block;
@@ -581,6 +600,11 @@ div.answers {
     .normal-rect {
       display: block;
       animation: raiseup 2s;
+    }
+
+    .title,
+    .subtitle {
+      opacity: 1;
     }
   }
 }
