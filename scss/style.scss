@@ -24,8 +24,7 @@ body {
 
 html,
 body {
-  display: flex;
-  // width: $windowWidth;
+  display: flex; // width: $windowWidth;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -119,14 +118,17 @@ body {
 
 .begin.active {
   .rect {
+    transform-origin: 100px 100px;
     animation: rotateRect 5s;
     animation-fill-mode: forwards;
   }
   .circle {
+    transform-origin: 100px 100px;
     animation: scaleCircle 5s;
     animation-fill-mode: forwards;
   }
   .star {
+    transform-origin: 100px 100px;
     animation: rotateStar 5s;
     animation-fill-mode: forwards;
   }
@@ -192,7 +194,7 @@ body {
   }
 }
 
-.question1 > .right.active {
+.question1>.right.active {
   .rect {
     animation: q1-rect-ani $q-animation-time;
     animation-fill-mode: forwards;
@@ -291,15 +293,15 @@ body {
   text-align: left;
 }
 
-.question-number + .question-desc {
+.question-number+.question-desc {
   margin-top: 10px;
 }
 
-.question-desc + .choose-answer {
+.question-desc+.choose-answer {
   margin-top: 16px;
 }
 
-.choose-answer + .answers {
+.choose-answer+.answers {
   margin-top: 40px;
 }
 
@@ -328,7 +330,7 @@ div.answers {
     color: #ffffff;
     background-color: transparent;
   }
-  button + button {
+  button+button {
     margin-top: 16px;
   }
   button:hover {
@@ -512,7 +514,6 @@ div.answers {
     left: 38%;
     z-index: 10;
   }
-
   &.end {
     opacity: 0.2;
   }
@@ -568,11 +569,9 @@ div.answers {
   .small-rect {
     display: none;
   }
-
   .normal-rect {
     display: none;
   }
-
   .title {
     @extend %title;
     position: absolute;
@@ -591,57 +590,47 @@ div.answers {
     opacity: 0;
     transition: opacity 2s, top 2s, left 2s;
   }
-
   .item {
     opacity: 0;
     transition: opacity 2s;
   }
-
   &.active {
     .small-rect {
       display: block;
       animation: falldown 2s;
     }
-
     .normal-rect {
       display: block;
       animation: raiseup 2s;
       transition: all 2s;
     }
-
     .title,
     .subtitle {
       opacity: 1;
     }
-
     &.detail {
       .small-rect4,
       .small-rect5,
       .small-rect6 {
         display: none;
       }
-
       .small-rect1 {
         animation: small-rect1-detail 2s forwards;
       }
-
       .small-rect2 {
         animation: small-rect2-detail 2s forwards;
       }
       .small-rect3 {
         animation: small-rect3-detail 2s forwards;
       }
-
       .title {
         top: 125px;
         left: 522px;
       }
-
       .subtitle {
         top: 81px;
         left: 522px;
       }
-
       .normal-rect {
         width: 289px;
         height: 289px;
@@ -659,7 +648,6 @@ div.answers {
           transform: translate(-150px, -120px) rotate(15deg);
         }
       }
-
       .item {
         opacity: 1;
       }
@@ -671,17 +659,14 @@ div.answers {
         color: $pink;
         left: 601px;
       }
-
       .item1 {
         @extend %item;
         top: 240px;
       }
-
       .item2 {
         @extend %item;
         top: 328px;
       }
-
       .item3 {
         @extend %item;
         top: 416px;
@@ -709,10 +694,12 @@ div.answers {
   top: -26px;
   left: 32px;
 }
+
 .small-rect2 {
   top: 97px;
   left: 259px;
 }
+
 .small-rect3 {
   top: 213px;
   left: 853px;
@@ -738,7 +725,6 @@ div.answers {
   from {
     transform: translate(0, -400px) rotate(45deg);
   }
-
   to {
     transform: translate(0, 0) rotate(45deg);
   }
@@ -748,7 +734,6 @@ div.answers {
   from {
     transform: translate(0, 500px);
   }
-
   to {
     transform: translate(0, 0);
   }
@@ -759,6 +744,7 @@ div.answers {
   height: 440px;
   position: absolute;
 }
+
 .normal-rect3 {
   @extend %normal-rect;
   border: 2px solid #ffffff;
@@ -785,16 +771,15 @@ div.answers {
   from {
     transform: translate(0, 0) rotate(45deg);
   }
-
   to {
     transform: translate(493px, 264px) rotate(45deg);
   }
 }
+
 @keyframes small-rect2-detail {
   from {
     transform: translate(0, 0) rotate(45deg);
   }
-
   to {
     transform: translate(266px, 229px) rotate(45deg);
   }
@@ -804,7 +789,6 @@ div.answers {
   from {
     transform: translate(0, 0) rotate(45deg);
   }
-
   to {
     transform: translate(-328px, 201px) rotate(45deg);
   }

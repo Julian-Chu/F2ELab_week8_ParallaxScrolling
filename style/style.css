@@ -195,6 +195,8 @@ body {
 }
 
 .begin.active .rect {
+  -webkit-transform-origin: 100px 100px;
+          transform-origin: 100px 100px;
   -webkit-animation: rotateRect 5s;
           animation: rotateRect 5s;
   -webkit-animation-fill-mode: forwards;
@@ -202,6 +204,8 @@ body {
 }
 
 .begin.active .circle {
+  -webkit-transform-origin: 100px 100px;
+          transform-origin: 100px 100px;
   -webkit-animation: scaleCircle 5s;
           animation: scaleCircle 5s;
   -webkit-animation-fill-mode: forwards;
@@ -209,6 +213,8 @@ body {
 }
 
 .begin.active .star {
+  -webkit-transform-origin: 100px 100px;
+          transform-origin: 100px 100px;
   -webkit-animation: rotateStar 5s;
           animation: rotateStar 5s;
   -webkit-animation-fill-mode: forwards;
@@ -846,8 +852,8 @@ div.answers button:hover {
 .rect1.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -190%;
-  left: 100%;
+  bottom: -10%;
+  left: 5%;
   width: 5px;
   height: 5px;
   -webkit-animation: circle-fly 3s forwards;
@@ -858,8 +864,8 @@ div.answers button:hover {
 .rect2.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -110%;
-  left: 25%;
+  bottom: -140%;
+  left: 60%;
   width: 10px;
   height: 10px;
   -webkit-animation: circle-fly 3s forwards;
@@ -870,8 +876,8 @@ div.answers button:hover {
 .rect3.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -160%;
-  left: 75%;
+  bottom: -110%;
+  left: 35%;
   width: 15px;
   height: 15px;
   -webkit-animation: circle-fly 3s forwards;
@@ -882,8 +888,8 @@ div.answers button:hover {
 .rect4.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -50%;
-  left: 75%;
+  bottom: -140%;
+  left: 25%;
   width: 20px;
   height: 20px;
   -webkit-animation: circle-fly 3s forwards;
@@ -894,8 +900,8 @@ div.answers button:hover {
 .rect5.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -140%;
-  left: 85%;
+  bottom: -100%;
+  left: 30%;
   width: 25px;
   height: 25px;
   -webkit-animation: circle-fly 3s forwards;
@@ -906,8 +912,8 @@ div.answers button:hover {
 .rect6.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -190%;
-  left: 25%;
+  bottom: -50%;
+  left: 95%;
   width: 30px;
   height: 30px;
   -webkit-animation: circle-fly 3s forwards;
@@ -918,8 +924,8 @@ div.answers button:hover {
 .rect7.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -70%;
-  left: 20%;
+  bottom: -100%;
+  left: 90%;
   width: 35px;
   height: 35px;
   -webkit-animation: circle-fly 3s forwards;
@@ -930,8 +936,8 @@ div.answers button:hover {
 .rect8.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -30%;
-  left: 40%;
+  bottom: -200%;
+  left: 50%;
   width: 40px;
   height: 40px;
   -webkit-animation: circle-fly 3s forwards;
@@ -942,8 +948,8 @@ div.answers button:hover {
 .rect9.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -30%;
-  left: 100%;
+  bottom: -20%;
+  left: 75%;
   width: 45px;
   height: 45px;
   -webkit-animation: circle-fly 3s forwards;
@@ -954,8 +960,8 @@ div.answers button:hover {
 .rect10.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -180%;
-  left: 15%;
+  bottom: -60%;
+  left: 70%;
   width: 50px;
   height: 50px;
   -webkit-animation: circle-fly 3s forwards;
@@ -966,8 +972,8 @@ div.answers button:hover {
 .rect11.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -110%;
-  left: 10%;
+  bottom: -70%;
+  left: 60%;
   width: 55px;
   height: 55px;
   -webkit-animation: circle-fly 3s forwards;
@@ -978,7 +984,7 @@ div.answers button:hover {
 .rect12.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -20%;
+  bottom: -60%;
   left: 20%;
   width: 60px;
   height: 60px;
@@ -990,8 +996,8 @@ div.answers button:hover {
 .rect13.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -100%;
-  left: 10%;
+  bottom: -20%;
+  left: 50%;
   width: 65px;
   height: 65px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1002,8 +1008,8 @@ div.answers button:hover {
 .rect14.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -60%;
-  left: 35%;
+  bottom: -190%;
+  left: 95%;
   width: 70px;
   height: 70px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1014,8 +1020,8 @@ div.answers button:hover {
 .rect15.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -60%;
-  left: 75%;
+  bottom: -90%;
+  left: 55%;
   width: 75px;
   height: 75px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1026,8 +1032,8 @@ div.answers button:hover {
 .rect16.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -10%;
-  left: 20%;
+  bottom: -100%;
+  left: 15%;
   width: 80px;
   height: 80px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1038,8 +1044,8 @@ div.answers button:hover {
 .rect17.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -120%;
-  left: 35%;
+  bottom: -30%;
+  left: 80%;
   width: 85px;
   height: 85px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1050,8 +1056,8 @@ div.answers button:hover {
 .rect18.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -120%;
-  left: 100%;
+  bottom: -150%;
+  left: 80%;
   width: 90px;
   height: 90px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1062,8 +1068,8 @@ div.answers button:hover {
 .rect19.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -10%;
-  left: 10%;
+  bottom: -150%;
+  left: 80%;
   width: 95px;
   height: 95px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1074,8 +1080,8 @@ div.answers button:hover {
 .rect20.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -180%;
-  left: 95%;
+  bottom: -130%;
+  left: 55%;
   width: 100px;
   height: 100px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1086,8 +1092,8 @@ div.answers button:hover {
 .rect21.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -170%;
-  left: 5%;
+  bottom: -180%;
+  left: 85%;
   width: 105px;
   height: 105px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1098,8 +1104,8 @@ div.answers button:hover {
 .rect22.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -140%;
-  left: 60%;
+  bottom: -160%;
+  left: 45%;
   width: 110px;
   height: 110px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1110,8 +1116,8 @@ div.answers button:hover {
 .rect23.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -150%;
-  left: 90%;
+  bottom: -10%;
+  left: 65%;
   width: 115px;
   height: 115px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1123,7 +1129,7 @@ div.answers button:hover {
   position: fixed;
   background-color: #ff3c82;
   bottom: -170%;
-  left: 35%;
+  left: 45%;
   width: 120px;
   height: 120px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1134,8 +1140,8 @@ div.answers button:hover {
 .rect25.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -150%;
-  left: 45%;
+  bottom: -180%;
+  left: 75%;
   width: 125px;
   height: 125px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1146,8 +1152,8 @@ div.answers button:hover {
 .rect26.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -130%;
-  left: 85%;
+  bottom: -70%;
+  left: 55%;
   width: 130px;
   height: 130px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1158,8 +1164,8 @@ div.answers button:hover {
 .rect27.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -60%;
-  left: 30%;
+  bottom: -140%;
+  left: 50%;
   width: 135px;
   height: 135px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1170,8 +1176,8 @@ div.answers button:hover {
 .rect28.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -80%;
-  left: 20%;
+  bottom: -70%;
+  left: 85%;
   width: 140px;
   height: 140px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1182,8 +1188,8 @@ div.answers button:hover {
 .rect29.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -130%;
-  left: 15%;
+  bottom: -70%;
+  left: 85%;
   width: 145px;
   height: 145px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1194,8 +1200,8 @@ div.answers button:hover {
 .rect30.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -10%;
-  left: 30%;
+  bottom: -190%;
+  left: 40%;
   width: 150px;
   height: 150px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1206,8 +1212,8 @@ div.answers button:hover {
 .rect31.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -120%;
-  left: 80%;
+  bottom: -40%;
+  left: 95%;
   width: 155px;
   height: 155px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1218,8 +1224,8 @@ div.answers button:hover {
 .rect32.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -30%;
-  left: 90%;
+  bottom: -130%;
+  left: 75%;
   width: 160px;
   height: 160px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1230,8 +1236,8 @@ div.answers button:hover {
 .rect33.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -180%;
-  left: 60%;
+  bottom: -60%;
+  left: 15%;
   width: 165px;
   height: 165px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1242,8 +1248,8 @@ div.answers button:hover {
 .rect34.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -180%;
-  left: 55%;
+  bottom: -10%;
+  left: 35%;
   width: 170px;
   height: 170px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1254,8 +1260,8 @@ div.answers button:hover {
 .rect35.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -190%;
-  left: 85%;
+  bottom: -40%;
+  left: 90%;
   width: 175px;
   height: 175px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1266,8 +1272,8 @@ div.answers button:hover {
 .rect36.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -170%;
-  left: 45%;
+  bottom: -70%;
+  left: 70%;
   width: 180px;
   height: 180px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1278,8 +1284,8 @@ div.answers button:hover {
 .rect37.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -80%;
-  left: 5%;
+  bottom: -30%;
+  left: 100%;
   width: 185px;
   height: 185px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1290,8 +1296,8 @@ div.answers button:hover {
 .rect38.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -60%;
-  left: 85%;
+  bottom: -130%;
+  left: 15%;
   width: 190px;
   height: 190px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1302,8 +1308,8 @@ div.answers button:hover {
 .rect39.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -200%;
-  left: 40%;
+  bottom: -70%;
+  left: 60%;
   width: 195px;
   height: 195px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1314,8 +1320,8 @@ div.answers button:hover {
 .rect40.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -160%;
-  left: 75%;
+  bottom: -40%;
+  left: 55%;
   width: 200px;
   height: 200px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1326,8 +1332,8 @@ div.answers button:hover {
 .rect41.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -160%;
-  left: 90%;
+  bottom: -170%;
+  left: 25%;
   width: 205px;
   height: 205px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1338,8 +1344,8 @@ div.answers button:hover {
 .rect42.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -150%;
-  left: 25%;
+  bottom: -160%;
+  left: 35%;
   width: 210px;
   height: 210px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1350,8 +1356,8 @@ div.answers button:hover {
 .rect43.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -120%;
-  left: 100%;
+  bottom: -150%;
+  left: 50%;
   width: 215px;
   height: 215px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1362,8 +1368,8 @@ div.answers button:hover {
 .rect44.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -50%;
-  left: 75%;
+  bottom: -80%;
+  left: 35%;
   width: 220px;
   height: 220px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1374,8 +1380,8 @@ div.answers button:hover {
 .rect45.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -130%;
-  left: 5%;
+  bottom: -170%;
+  left: 10%;
   width: 225px;
   height: 225px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1386,8 +1392,8 @@ div.answers button:hover {
 .rect46.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -20%;
-  left: 45%;
+  bottom: -60%;
+  left: 70%;
   width: 230px;
   height: 230px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1398,8 +1404,8 @@ div.answers button:hover {
 .rect47.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -20%;
-  left: 15%;
+  bottom: -80%;
+  left: 5%;
   width: 235px;
   height: 235px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1410,8 +1416,8 @@ div.answers button:hover {
 .rect48.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -70%;
-  left: 100%;
+  bottom: -110%;
+  left: 50%;
   width: 240px;
   height: 240px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1422,8 +1428,8 @@ div.answers button:hover {
 .rect49.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -70%;
-  left: 30%;
+  bottom: -150%;
+  left: 5%;
   width: 245px;
   height: 245px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1434,8 +1440,8 @@ div.answers button:hover {
 .rect50.active {
   position: fixed;
   background-color: #ff3c82;
-  bottom: -60%;
-  left: 65%;
+  bottom: -50%;
+  left: 45%;
   width: 250px;
   height: 250px;
   -webkit-animation: circle-fly 3s forwards;
@@ -1446,8 +1452,8 @@ div.answers button:hover {
 .circle1.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -130%;
-  left: 85%;
+  bottom: -180%;
+  left: 60%;
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -1459,8 +1465,8 @@ div.answers button:hover {
 .circle2.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -20%;
-  left: 35%;
+  bottom: -200%;
+  left: 80%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1472,8 +1478,8 @@ div.answers button:hover {
 .circle3.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -200%;
-  left: 35%;
+  bottom: -180%;
+  left: 5%;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -1485,8 +1491,8 @@ div.answers button:hover {
 .circle4.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 80%;
+  bottom: -150%;
+  left: 60%;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -1498,8 +1504,8 @@ div.answers button:hover {
 .circle5.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -30%;
-  left: 80%;
+  bottom: -10%;
+  left: 100%;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -1511,8 +1517,8 @@ div.answers button:hover {
 .circle6.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -140%;
-  left: 40%;
+  bottom: -160%;
+  left: 65%;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1524,8 +1530,8 @@ div.answers button:hover {
 .circle7.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -120%;
-  left: 65%;
+  bottom: -80%;
+  left: 15%;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1537,8 +1543,8 @@ div.answers button:hover {
 .circle8.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -170%;
-  left: 35%;
+  bottom: -50%;
+  left: 80%;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1550,8 +1556,8 @@ div.answers button:hover {
 .circle9.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -110%;
-  left: 90%;
+  bottom: -150%;
+  left: 5%;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1563,8 +1569,8 @@ div.answers button:hover {
 .circle10.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -10%;
-  left: 65%;
+  bottom: -30%;
+  left: 75%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1576,8 +1582,8 @@ div.answers button:hover {
 .circle11.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -200%;
-  left: 15%;
+  bottom: -80%;
+  left: 50%;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -1589,8 +1595,8 @@ div.answers button:hover {
 .circle12.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -80%;
-  left: 55%;
+  bottom: -30%;
+  left: 5%;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1602,8 +1608,8 @@ div.answers button:hover {
 .circle13.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -110%;
-  left: 100%;
+  bottom: -40%;
+  left: 15%;
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -1615,8 +1621,8 @@ div.answers button:hover {
 .circle14.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 40%;
+  bottom: -140%;
+  left: 75%;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -1628,7 +1634,7 @@ div.answers button:hover {
 .circle15.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -20%;
+  bottom: -130%;
   left: 20%;
   width: 75px;
   height: 75px;
@@ -1641,8 +1647,8 @@ div.answers button:hover {
 .circle16.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -10%;
-  left: 40%;
+  bottom: -150%;
+  left: 80%;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -1654,8 +1660,8 @@ div.answers button:hover {
 .circle17.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -190%;
-  left: 75%;
+  bottom: -100%;
+  left: 60%;
   width: 85px;
   height: 85px;
   border-radius: 50%;
@@ -1667,8 +1673,8 @@ div.answers button:hover {
 .circle18.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -10%;
-  left: 20%;
+  bottom: -180%;
+  left: 60%;
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -1680,8 +1686,8 @@ div.answers button:hover {
 .circle19.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -60%;
-  left: 90%;
+  bottom: -120%;
+  left: 30%;
   width: 95px;
   height: 95px;
   border-radius: 50%;
@@ -1693,8 +1699,8 @@ div.answers button:hover {
 .circle20.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -120%;
-  left: 65%;
+  bottom: -30%;
+  left: 60%;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -1706,8 +1712,8 @@ div.answers button:hover {
 .circle21.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 90%;
+  bottom: -180%;
+  left: 50%;
   width: 105px;
   height: 105px;
   border-radius: 50%;
@@ -1719,8 +1725,8 @@ div.answers button:hover {
 .circle22.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -40%;
-  left: 15%;
+  bottom: -110%;
+  left: 50%;
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -1732,8 +1738,8 @@ div.answers button:hover {
 .circle23.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -160%;
-  left: 30%;
+  bottom: -200%;
+  left: 15%;
   width: 115px;
   height: 115px;
   border-radius: 50%;
@@ -1745,8 +1751,8 @@ div.answers button:hover {
 .circle24.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -170%;
-  left: 30%;
+  bottom: -60%;
+  left: 90%;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -1758,8 +1764,8 @@ div.answers button:hover {
 .circle25.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -180%;
-  left: 15%;
+  bottom: -110%;
+  left: 30%;
   width: 125px;
   height: 125px;
   border-radius: 50%;
@@ -1771,8 +1777,8 @@ div.answers button:hover {
 .circle26.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -90%;
-  left: 70%;
+  bottom: -110%;
+  left: 75%;
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -1784,8 +1790,8 @@ div.answers button:hover {
 .circle27.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -70%;
-  left: 75%;
+  bottom: -190%;
+  left: 5%;
   width: 135px;
   height: 135px;
   border-radius: 50%;
@@ -1797,8 +1803,8 @@ div.answers button:hover {
 .circle28.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -40%;
-  left: 75%;
+  bottom: -90%;
+  left: 15%;
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -1810,8 +1816,8 @@ div.answers button:hover {
 .circle29.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 75%;
+  bottom: -30%;
+  left: 30%;
   width: 145px;
   height: 145px;
   border-radius: 50%;
@@ -1823,8 +1829,8 @@ div.answers button:hover {
 .circle30.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -40%;
-  left: 5%;
+  bottom: -140%;
+  left: 35%;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -1836,8 +1842,8 @@ div.answers button:hover {
 .circle31.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -190%;
-  left: 65%;
+  bottom: -50%;
+  left: 5%;
   width: 155px;
   height: 155px;
   border-radius: 50%;
@@ -1849,8 +1855,8 @@ div.answers button:hover {
 .circle32.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -170%;
-  left: 50%;
+  bottom: -120%;
+  left: 5%;
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -1862,8 +1868,8 @@ div.answers button:hover {
 .circle33.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -80%;
-  left: 5%;
+  bottom: -90%;
+  left: 95%;
   width: 165px;
   height: 165px;
   border-radius: 50%;
@@ -1875,8 +1881,8 @@ div.answers button:hover {
 .circle34.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -110%;
-  left: 45%;
+  bottom: -70%;
+  left: 5%;
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -1888,8 +1894,8 @@ div.answers button:hover {
 .circle35.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -140%;
-  left: 35%;
+  bottom: -30%;
+  left: 45%;
   width: 175px;
   height: 175px;
   border-radius: 50%;
@@ -1901,8 +1907,8 @@ div.answers button:hover {
 .circle36.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -30%;
-  left: 95%;
+  bottom: -110%;
+  left: 40%;
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -1914,8 +1920,8 @@ div.answers button:hover {
 .circle37.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -70%;
-  left: 25%;
+  bottom: -120%;
+  left: 75%;
   width: 185px;
   height: 185px;
   border-radius: 50%;
@@ -1927,8 +1933,8 @@ div.answers button:hover {
 .circle38.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -140%;
-  left: 50%;
+  bottom: -60%;
+  left: 25%;
   width: 190px;
   height: 190px;
   border-radius: 50%;
@@ -1940,8 +1946,8 @@ div.answers button:hover {
 .circle39.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -70%;
-  left: 5%;
+  bottom: -200%;
+  left: 75%;
   width: 195px;
   height: 195px;
   border-radius: 50%;
@@ -1953,8 +1959,8 @@ div.answers button:hover {
 .circle40.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -140%;
-  left: 75%;
+  bottom: -110%;
+  left: 20%;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -1966,8 +1972,8 @@ div.answers button:hover {
 .circle41.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -90%;
-  left: 30%;
+  bottom: -180%;
+  left: 50%;
   width: 205px;
   height: 205px;
   border-radius: 50%;
@@ -1979,8 +1985,8 @@ div.answers button:hover {
 .circle42.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 95%;
+  bottom: -120%;
+  left: 70%;
   width: 210px;
   height: 210px;
   border-radius: 50%;
@@ -1992,8 +1998,8 @@ div.answers button:hover {
 .circle43.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -60%;
-  left: 25%;
+  bottom: -50%;
+  left: 20%;
   width: 215px;
   height: 215px;
   border-radius: 50%;
@@ -2005,8 +2011,8 @@ div.answers button:hover {
 .circle44.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -30%;
-  left: 50%;
+  bottom: -40%;
+  left: 45%;
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -2018,8 +2024,8 @@ div.answers button:hover {
 .circle45.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -120%;
-  left: 75%;
+  bottom: -150%;
+  left: 10%;
   width: 225px;
   height: 225px;
   border-radius: 50%;
@@ -2031,8 +2037,8 @@ div.answers button:hover {
 .circle46.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -160%;
-  left: 45%;
+  bottom: -40%;
+  left: 70%;
   width: 230px;
   height: 230px;
   border-radius: 50%;
@@ -2044,8 +2050,8 @@ div.answers button:hover {
 .circle47.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -50%;
-  left: 70%;
+  bottom: -10%;
+  left: 100%;
   width: 235px;
   height: 235px;
   border-radius: 50%;
@@ -2058,7 +2064,7 @@ div.answers button:hover {
   position: fixed;
   background-color: #0027c8;
   bottom: -200%;
-  left: 65%;
+  left: 50%;
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -2070,8 +2076,8 @@ div.answers button:hover {
 .circle49.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -170%;
-  left: 20%;
+  bottom: -50%;
+  left: 35%;
   width: 245px;
   height: 245px;
   border-radius: 50%;
@@ -2083,8 +2089,8 @@ div.answers button:hover {
 .circle50.active {
   position: fixed;
   background-color: #0027c8;
-  bottom: -100%;
-  left: 15%;
+  bottom: -200%;
+  left: 55%;
   width: 250px;
   height: 250px;
   border-radius: 50%;
