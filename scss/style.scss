@@ -562,8 +562,13 @@ div.answers {
   @extend %genericDiv;
   background-color: $dark-blue;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
+  position: relative;
   .small-rect {
+    display: none;
+  }
+
+  .normal-rect {
     display: none;
   }
 
@@ -571,6 +576,11 @@ div.answers {
     .small-rect {
       display: block;
       animation: falldown 2s;
+    }
+
+    .normal-rect {
+      display: block;
+      animation: raiseup 2s;
     }
   }
 }
@@ -627,4 +637,40 @@ div.answers {
   to {
     transform: translate(0, 0) rotate(45deg);
   }
+}
+
+@keyframes raiseup {
+  from {
+    transform: translate(0, 500px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+%normal-rect {
+  width: 440px;
+  height: 440px;
+  position: absolute;
+}
+.normal-rect3 {
+  @extend %normal-rect;
+  border: 2px solid #ffffff;
+  top: 371px;
+  left: 313px;
+}
+
+.normal-rect2 {
+  @extend %normal-rect;
+  top: 418px;
+  left: 293px;
+  background-color: $pink;
+}
+
+.normal-rect1 {
+  @extend %normal-rect;
+  top: 396px;
+  left: 259px;
+  background-color: #000000;
 }
